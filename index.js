@@ -8,6 +8,10 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         document.body.style.backgroundImage = `url(${data.urls.full})`;
         document.getElementById("author").textContent = `By: ${data.user.name}`;
     })
+    .catch(error => {
+        document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1565118531796-763e5082d113)`;
+        document.getElementById("author").textContent = `By: Nikola Majksner`;
+    })
     
 
 
