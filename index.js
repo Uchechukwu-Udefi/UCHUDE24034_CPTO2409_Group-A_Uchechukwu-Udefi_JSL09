@@ -12,6 +12,18 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1565118531796-763e5082d113)`;
         document.getElementById("author").textContent = `By: Nikola Majksner`;
     })
+
+// Get current cryptocurrency coin data from the CoinGecko API
+// The data is fetched using the CoinGecko API
+fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
+    .then(response => {
+        if(!response.ok)
+        throw Error("Request failed");
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    });
     
 
 
