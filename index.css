@@ -33,9 +33,31 @@ div.time-date {
     align-items: center;
 }
 
+div#crypto {
+    font: 1.3em sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 1px;
+    padding: 1px;
+}
+
+div#crypto-title {
+    font: 1.3em sans-serif;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    
+}
 
 
+div#crypto-title > img {
+    margin-right: 8px;
+    
+}
 
+div#crypto-info > p {
+    margin: 2px;
+}
 
 
 
