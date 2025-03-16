@@ -26,10 +26,11 @@ fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
             <img src=${data.image.small}/>
             <span>${data.name}</span>
         `;
+        
         document.getElementById("crypto-info").innerHTML += `
-            <p>🎯: $${data.market_data.current_price.usd}</p>
-            <p>📈: $${data.market_data.high_24h.usd}</p>
-            <p>📉: $${data.market_data.low_24h.usd}</p>
+            <p>🎯: $${data.market_data.current_price.usd.toFixed(2)}</p>
+            <p>📈: $${data.market_data.high_24h.usd.toFixed(2)}</p>
+            <p>📉: $${data.market_data.low_24h.usd.toFixed(2)}</p>
         `;
         
     });
@@ -43,8 +44,7 @@ document.getElementById("time").textContent = date.toLocaleTimeString("en-us", {
 document.getElementById("date").textContent = date.toLocaleDateString("en-us", {dateStyle: "full"});
 };
 
-getDate();
-
+setInterval(getDate, 1000);
 
 
 
