@@ -57,8 +57,8 @@ if(navigator.geolocation) {
             console.log(data);
             document.getElementById("weather").innerHTML = `
                 <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="icon"/>
-                <p>${Math.round(data.main.temp)}°C</p>
-                <p>${data.name}</p>
+                <p class="weather-temp">${Math.round(data.main.temp)}°C</p>
+                <p class="weather-city">${data.name}</p>
             `;
         })
         .catch(error => {
