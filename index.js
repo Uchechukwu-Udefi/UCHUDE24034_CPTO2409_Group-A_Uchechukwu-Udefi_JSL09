@@ -33,8 +33,17 @@ fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
         `;
         
     });
-    
 
+// Get the current weather data from the OpenWeather API
+
+// Get the current time and date, update it every second and display it on the page
+function getDate() {
+const date = new Date();
+document.getElementById("time").textContent = date.toLocaleTimeString("en-us", {timeStyle: "short"});
+document.getElementById("date").textContent = date.toLocaleDateString("en-us", {dateStyle: "full"});
+};
+
+getDate();
 
 
 
