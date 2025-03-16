@@ -85,6 +85,24 @@ p.weather-temp {
     margin-left: -10px;
 }
 
+.time-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1px;
+    padding: 1px;
+}
+
+.time {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.date {
+    font-size: 1.5em;
+    margin: 0;
+}
+
 
 
 
